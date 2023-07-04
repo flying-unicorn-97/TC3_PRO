@@ -9,6 +9,12 @@ VAR
 	jog1:MC_Jog;
 	jog_for: BOOL;
 	jog_back: BOOL;
+	
+	//增加代码，与原版本程序做区分
+	a:INT;
+	b:INT;
+	c:INT;
+	d:INT;
 END_VAR
 ]]></Declaration>
     <Implementation>
@@ -40,13 +46,19 @@ jog1(
 	Active=> , 
 	CommandAborted=> , 
 	Error=> , 
-	ErrorID=> );]]></ST>
+	ErrorID=> );
+	
+	
+	//额外增加的代码
+	d:=a+b+c;]]></ST>
     </Implementation>
     <LineIds Name="MAIN">
       <LineId Id="7" Count="11" />
       <LineId Id="2" Count="0" />
       <LineId Id="23" Count="14" />
       <LineId Id="22" Count="0" />
+      <LineId Id="54" Count="2" />
+      <LineId Id="53" Count="0" />
     </LineIds>
   </POU>
 </TcPlcObject>
