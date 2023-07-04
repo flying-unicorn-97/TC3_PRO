@@ -15,6 +15,7 @@ VAR
 	b:INT;
 	c:INT;
 	d:INT;
+	add1: FB_ADD;
 END_VAR
 ]]></Declaration>
     <Implementation>
@@ -47,18 +48,16 @@ jog1(
 	CommandAborted=> , 
 	Error=> , 
 	ErrorID=> );
-	
-	
-	//额外增加的代码
-	d:=a+b+c;]]></ST>
+	add1(in1:= a, in2:= b, in3:= c, out=>d );
+	]]></ST>
     </Implementation>
     <LineIds Name="MAIN">
       <LineId Id="7" Count="11" />
       <LineId Id="2" Count="0" />
       <LineId Id="23" Count="14" />
       <LineId Id="22" Count="0" />
-      <LineId Id="54" Count="2" />
-      <LineId Id="53" Count="0" />
+      <LineId Id="57" Count="0" />
+      <LineId Id="54" Count="0" />
     </LineIds>
   </POU>
 </TcPlcObject>
